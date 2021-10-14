@@ -13,7 +13,9 @@ function onFormSubmit(event) {
     alert(`All the fields must be filled in`);
   }
 
-  console.log({ email: email.value, password: password.value });
+  if (email.value !== '' && password.value !== '') {
+    console.log({ email: email.value, password: password.value });
+  }
 
   event.currentTarget.reset();
 }
