@@ -3,8 +3,10 @@ const output = document.querySelector('#name-output');
 
 textInput.addEventListener('input', (event) => {
   const name = event.currentTarget.value;
-  if (name !== '') {
-    output.textContent = name;
+  const clearedName = name.trim();
+
+  if (clearedName !== '') {
+    output.textContent = clearedName;
   } else {
     output.textContent = 'Anonymous';
   }
